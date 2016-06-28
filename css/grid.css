@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+/* row control */
+
+/* Perishable Clearfix: use on any parent with floating children */
+.clearfix:after,
+.row:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix,
+* html .row             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix,
+*:first-child+html .row { zoom: 1; } /* IE7 */
+
+
+
+/* column control */
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	padding: 0;
+}
+
+.col {
+	float: left;
+	margin-left: 1.6%;
+	margin-bottom: 2em;
+}
+
+.col:first-child { margin-left: 0; } 
+
+.col-12 { width: 100%; }
+.col-11 { width: 91.53%; }
+.col-10 { width: 83.06%; }
+.col-9 { width: 74.6%; }
+.col-8 { width: 66.13%; }
+.col-7 { width: 57.66%; }
+.col-6 { width: 49.2%; }
+.col-5 { width: 40.73%; }
+.col-4 { width: 32.26%; }
+.col-3 { width: 23.8%; }
+.col-2 { width: 15.332%; }
+.col-1 { width: 6.866%; }
+
+
+/* Offset control (col-# + 1.6% margin) */
+.offset-1 { margin-left: 8.466% !important; }
+.offset-2 { margin-left: 16.932% !important; }
+.offset-3 { margin-left: 25.4% !important; }
+.offset-4 { margin-left: 33.86% !important; }
+.offset-5 { margin-left: 42.33% !important; }
+.offset-6 { margin-left: 50.8% !important; }
+.offset-7 { margin-left: 59.26% !important; }
+.offset-8 { margin-left: 67.73% !important; }
+.offset-9 { margin-left: 76.2% !important; }
+.offset-10 { margin-left: 84.66% !important; }
+.offset-11 { margin-left: 93.13% !important; }
+
+
+/* responsive element scaling */
+img.scale, 
+iframe.scale, 
+object.scale {
+	height: auto;
+	max-width: 100%;
+}
+
+
+/* Portrait phones and down */
+@media only screen and (max-width: 30em) { 
+	.col { 
+		margin-left: 0;
+	}
+
+	.col-12, 
+	.col-11,
+	.col-10,
+	.col-9,
+	.col-8,
+	.col-7,
+	.col-6,
+	.col-5,
+	.col-4,
+	.col-3,
+	.col-2,
+	.col-1 {
+		width: 100%; 
+	}
+	
+	.wrapper {
+		width: 100%;  
+		margin: 0 auto; padding: 0;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media only screen and (min-width: 30em) and (max-width: 48em) { 
+	.wrapper {
+		width: 30em;
+	}
+}
+
+/* Portrait tablet to landscape narrow desktop */
+@media only screen and (min-width: 48em) and (max-width: 60em) { 
+	.wrapper {
+		width: 48em;
+	}
+}
+
+/* Standard Desktop */ 
+@media only screen and (min-width: 60em) and (max-width: 72.5em) {
+	.wrapper {
+		width: 60em;
+	}
+}
+
+
+@media only screen and (min-width: 72.5em) { 
+	.wrapper {
+		width: 72.5em;
+	}
+}
